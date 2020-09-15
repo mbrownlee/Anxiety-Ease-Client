@@ -4,7 +4,9 @@ import { withRouter } from "react-router-dom";
 import Register from "./auth/Register";
 import Login from "./auth/Login";
 import ActivityTypeList from "./activityType/ActivityTypeList";
-
+import DeepBreathingList from "./staticActivityResource/DeepBreathingList";
+import FiveFourThreeList from "./staticActivityResource/FiveFourThreeList";
+import PositiveThoughtsList from "./staticActivityResource/PositiveThoughtsList";
 
 const ApplicationViews = () => {
   return (
@@ -36,7 +38,28 @@ const ApplicationViews = () => {
           return <ActivityTypeList {...props} />;
         }}
       />
- </React.Fragment>
+      <Route
+        exact
+        path="/activities/1"
+        render={(props) => {
+          return <DeepBreathingList {...props} />;
+        }}
+      />
+      <Route
+        exact
+        path="/activities/2"
+        render={(props) => {
+          return <FiveFourThreeList {...props} />;
+        }}
+      />
+      <Route
+        exact
+        path="/activities/3"
+        render={(props) => {
+          return <PositiveThoughtsList {...props} />;
+        }}
+      />
+    </React.Fragment>
   );
 };
 
