@@ -6,6 +6,7 @@ const ActivityTypeCard = (props) => {
     <div className="activityTypeCard">
       <div className="activityTypeCard-content">
         <div>
+        {/* I want it to link to the resources associated with the activity type chosen */}
           <Link to={`/activities/${props.activityType.id}`}>
             {props.activityType.name}
           </Link>
