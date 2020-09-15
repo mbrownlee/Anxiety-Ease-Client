@@ -7,6 +7,7 @@ import ActivityTypeList from "./activityType/ActivityTypeList";
 import DeepBreathingList from "./staticActivityResource/DeepBreathingList";
 import FiveFourThreeList from "./staticActivityResource/FiveFourThreeList";
 import PositiveThoughtsList from "./staticActivityResource/PositiveThoughtsList";
+import ActivityDetailForm from "./activityDetail/activityDetailForm";
 
 const ApplicationViews = () => {
   return (
@@ -57,6 +58,13 @@ const ApplicationViews = () => {
         path="/activities/3"
         render={(props) => {
           return <PositiveThoughtsList {...props} />;
+        }}
+      />
+      <Route
+        exact
+        path="/activitydetail/new"
+        render={(props) => {
+          return <ActivityDetailForm {...props} />;
         }}
       />
     </React.Fragment>
