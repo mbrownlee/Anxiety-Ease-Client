@@ -5,6 +5,7 @@ import useSimpleAuth from "../../hooks/useSimpleAuth";
 const DeepBreathContainer = (props) => {
   const [staticActivityResources, setStaticActivityResources] = useState([{resource:""}]);
   const [currentPrompt, setCurrentPrompt] = useState({resource:""});
+  const [currentIndex, setCurrentIndex] = useState(0);
   const { isAuthenticated } = useSimpleAuth();
 
   const getDeepBreathCards = () => {
@@ -29,12 +30,24 @@ const DeepBreathContainer = (props) => {
     setCurrentPrompt(staticActivityResources[0]);
   }, [staticActivityResources]);
 
+  useEffect(() => {
+    setCurrentPrompt(staticActivityResources[currentIndex]);
+  }, [currentIndex]);
+
+  const toggleIndex = () => {
+    if (currentIndex === 0) {
+        setCurrentIndex(1)
+    } else {
+        setCurrentIndex(0)
+    }
+      return [true, 1000]
+  }
 
   return (
     <div className="resourceCard">
       <div className="resourceCard-content">
         <div>
-          <DeepBreathTimer onComplete={() => [true, 1000], {currentPrompt}}/>
+          <DeepBreathTimer toggleIndex={toggleIndex}/>
           <div className="deepBreath">{currentPrompt.resource}</div>
         </div>
       </div>

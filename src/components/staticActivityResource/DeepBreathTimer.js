@@ -35,7 +35,7 @@ const DeepBreathTimer = (props) => {
             ['#8DBBF2', 0.33],
             ['#0a0466', 0.33],
         ]}
-        onComplete={() => [true, 1000]}
+        onComplete={props.toggleIndex}
             >
                 {renderTime}
         </CountdownCircleTimer>
