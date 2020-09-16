@@ -4,7 +4,7 @@ import { withRouter } from "react-router-dom";
 import Register from "./auth/Register";
 import Login from "./auth/Login";
 import ActivityTypeList from "./activityType/ActivityTypeList";
-import DeepBreathingList from "./staticActivityResource/DeepBreathingList";
+import DeepBreathContainer from "./staticActivityResource/DeepBreathContainer";
 import FiveFourThreeList from "./staticActivityResource/FiveFourThreeList";
 import PositiveThoughtsList from "./staticActivityResource/PositiveThoughtsList";
 import ActivityDetailForm from "./activityDetail/activityDetailForm";
@@ -43,7 +43,7 @@ const ApplicationViews = () => {
         exact
         path="/activities/1"
         render={(props) => {
-          return <DeepBreathingList {...props} />;
+          return <DeepBreathContainer {...props} />;
         }}
       />
       <Route
