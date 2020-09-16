@@ -3,6 +3,10 @@ import { Route } from "react-router-dom"
 import NavBar from "./nav/Nav"
 import ApplicationViews from "./ApplicationViews"
 
+
+ 
+
+
 const AnxietyApp = () => {
     return (
         <React.Fragment>
@@ -10,6 +14,7 @@ const AnxietyApp = () => {
                 <NavBar {...props} />
             )} />
             <ApplicationViews />
+            
         </React.Fragment>
     )
 }
