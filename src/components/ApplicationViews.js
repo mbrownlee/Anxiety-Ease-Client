@@ -6,7 +6,7 @@ import Login from "./auth/Login";
 import ActivityTypeList from "./activityType/ActivityTypeList";
 import DeepBreathContainer from "./staticActivityResource/DeepBreathContainer";
 import FiveFourThreeList from "./staticActivityResource/FiveFourThreeList";
-import PositiveThoughtsList from "./staticActivityResource/PositiveThoughtsList";
+import PositiveThoughtsContainer from "./staticActivityResource/PositiveThoughtsContainer";
 import ActivityDetailForm from "./activityDetail/activityDetailForm";
 
 const ApplicationViews = () => {
@@ -57,7 +57,7 @@ const ApplicationViews = () => {
         exact
         path="/activities/3"
         render={(props) => {
-          return <PositiveThoughtsList {...props} />;
+          return <PositiveThoughtsContainer {...props} />;
         }}
       />
       <Route
