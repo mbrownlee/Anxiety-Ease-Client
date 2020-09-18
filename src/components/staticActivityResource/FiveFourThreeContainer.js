@@ -5,7 +5,7 @@ const FiveFourThreeContainer = (props) => {
   const [staticActivityResources, setStaticActivityResources] = useState([
     { resource: "" },
   ]);
-  const [currentCard, setCurrentCard] = useState({ resource: "" });
+//   const [currentCard, setCurrentCard] = useState({ resource: "" });
   const [currentIndex, setCurrentIndex] = useState(0);
   const { isAuthenticated } = useSimpleAuth();
 
@@ -28,27 +28,35 @@ const FiveFourThreeContainer = (props) => {
   }, []);
 
   useEffect(() => {
+    let timeout
+    if (currentIndex < staticActivityResources.length -1) {
+        timeout = setTimeout(() => setCurrentIndex(currentIndex +1), 2000)
+    } 
+    return () => clearTimeout(timeout)
+}, [staticActivityResources, currentIndex]);
+
+//   useEffect(() => {
    
-    setCurrentCard(staticActivityResources[0]);
-  }, [staticActivityResources]);
+//     setCurrentCard(staticActivityResources[0]);
+//   }, [staticActivityResources]);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (currentIndex < staticActivityResources.length) {
-        const existingIndex = currentIndex +1;
-        setCurrentIndex(existingIndex);
-      } else {
-        clearInterval(interval);
-      }
-    }, 8000);
-    return () => clearInterval(interval);
-  }, []);
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       if (currentIndex < staticActivityResources.length) {
+//         const existingIndex = currentIndex +1;
+//         setCurrentIndex(existingIndex);
+//       } else {
+//         clearInterval(interval);
+//       }
+//     }, 8000);
+//     return () => clearInterval(interval);
+//   }, []);
 
-  useEffect(() => {
-    if (currentIndex < staticActivityResources.length) {
-      setCurrentCard(staticActivityResources[currentIndex]);
-    }
-  }, [currentIndex]);
+//   useEffect(() => {
+//     if (currentIndex < staticActivityResources.length) {
+//       setCurrentCard(staticActivityResources[currentIndex]);
+//     }
+//   }, [currentIndex]);
 
   return (
     <div className="resourceCard">
@@ -57,7 +65,9 @@ const FiveFourThreeContainer = (props) => {
           <h3>
             Out loud or in your head, answer each prompt. Notice what is around you.
           </h3>
-          <div className="positiveThoughts">{currentCard.resource}</div>
+          <div className="5-4-3-2-1">{staticActivityResources[currentIndex].resource}</div>
+          <button>Finished</button>
+          
         </div>
       </div>
     </div>

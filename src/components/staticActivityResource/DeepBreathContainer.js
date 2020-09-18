@@ -50,6 +50,7 @@ const DeepBreathContainer = (props) => {
           <DeepBreathTimer toggleIndex={toggleIndex}/>
           <div className="deepBreath">{currentPrompt.resource}</div>
         </div>
+        <button>Finished</button>
       </div>
     </div>
   );

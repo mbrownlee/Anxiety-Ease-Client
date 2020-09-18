@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import useSimpleAuth from "../../hooks/useSimpleAuth";
-// import "./Nav.css";
+import "./Nav.css";
 
 const NavBar = (props) => {
   const { isAuthenticated, logout } = useSimpleAuth();
@@ -9,11 +9,11 @@ const NavBar = (props) => {
   return (
     <nav>
       <ul>
-        <img
+        {/* <img
           className="logoease"
           src={require("../../AnxietyEaseLogo.png")}
           alt="logo"
-        />
+        /> */}
         <li>
           <Link to="/">Anxiety Ease</Link>
         </li>

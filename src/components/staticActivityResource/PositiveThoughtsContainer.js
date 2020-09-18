@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import useSimpleAuth from "../../hooks/useSimpleAuth";
+import ActivityDetailForm from "../activityDetail/activityDetailForm"
+// import NewActivityDetailButton from "../activityDetail/newActivityDetailInstance";
 
 const PositiveThoughtsContainer = (props) => {
   const [staticActivityResources, setStaticActivityResources] = useState([
     { resource: "" },
   ]);
-//   const [currentCard, setCurrentCard] = useState({ resource: "test" });
   const [currentIndex, setCurrentIndex] = useState(0);
   const { isAuthenticated } = useSimpleAuth();
 
@@ -35,44 +36,47 @@ const PositiveThoughtsContainer = (props) => {
       } else if (currentIndex !== 0){
           setCurrentIndex(0) }
       return () => clearTimeout(timeout)
-  }, [staticActivityResources, currentIndex])
+  }, [staticActivityResources, currentIndex]);
 
-//   useEffect(() => {
-//    debugger
-//     setCurrentCard(staticActivityResources[0]);
-//   }, [staticActivityResources]);
+  const constructNewActivityDetail = (evt) => {
+    evt.preventDefault();
+      const theActivityDetail = {
+        rating: "",
+        note: "",
+        // activity_type_id: parseInt(activityDetail.activity_type_id),
+      };
+      fetch("http://localhost:8000/activitydetail", {
+          method: "POST",
+          headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+              Authorization: `Token ${localStorage.getItem("anxiety_ease_token")}`,
+            },
+            body: JSON.stringify(theActivityDetail),
+        })
+        .then((response) => response.json())
+        .then(() => {
+            console.log("Added");
+            props.history.push("/activities");
+        });
+    }
 
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//         if (currentIndex < staticActivityResources.length) {
-//             debugger
-//         const existingIndex = currentIndex +1;
-//         setCurrentIndex(existingIndex);
-//       } else {
-//         clearInterval(interval);
-//       }
-//     }, 5000);
-//     return () => clearInterval(interval);
-//   }, []);
 
-//   useEffect(() => {
-//     if (currentIndex < staticActivityResources.length) {
-//       setCurrentCard(staticActivityResources[currentIndex]);
-//     }
-//   }, [currentIndex]);
-
-  return (
-    <div className="resourceCard">
-      <div className="resourceCard-content">
-        <div>
-          <h3>
-            Out loud or in your head, read each fact and try to believe it.
-          </h3>
-          <div className="positiveThoughts">{staticActivityResources[currentIndex].resource}</div>
+    return (
+        <div className="resourceCard">
+        <div className="resourceCard-content">
+            <div>
+            <h3>
+                Out loud or in your head, read each fact and try to believe it.
+            </h3>
+            <div className="positiveThoughts">{staticActivityResources[currentIndex].resource}</div>
+            {/* <button>Finished</button> */}
+            {/* <NewActivityDetailButton /> */}
+            <button type="button" onClick={constructNewActivityDetail}> Finish</button>
+            </div>
         </div>
-      </div>
-    </div>
-  );
+        </div>
+    );
 };
 
 export default PositiveThoughtsContainer;
