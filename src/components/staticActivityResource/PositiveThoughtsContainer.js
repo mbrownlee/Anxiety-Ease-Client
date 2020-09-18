@@ -5,7 +5,7 @@ const PositiveThoughtsContainer = (props) => {
   const [staticActivityResources, setStaticActivityResources] = useState([
     { resource: "" },
   ]);
-  const [currentCard, setCurrentCard] = useState({ resource: "" });
+//   const [currentCard, setCurrentCard] = useState({ resource: "test" });
   const [currentIndex, setCurrentIndex] = useState(0);
   const { isAuthenticated } = useSimpleAuth();
 
@@ -25,30 +25,41 @@ const PositiveThoughtsContainer = (props) => {
 
   useEffect(() => {
     getPositiveThoughtsCards();
+    
   }, []);
 
   useEffect(() => {
-   
-    setCurrentCard(staticActivityResources[0]);
-  }, [staticActivityResources]);
+      let timeout
+      if (currentIndex < staticActivityResources.length -1) {
+          timeout = setTimeout(() => setCurrentIndex(currentIndex +1), 2000)
+      } else if (currentIndex !== 0){
+          setCurrentIndex(0) }
+      return () => clearTimeout(timeout)
+  }, [staticActivityResources, currentIndex])
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (currentIndex < staticActivityResources.length) {
-        const existingIndex = currentIndex +1;
-        setCurrentIndex(existingIndex);
-      } else {
-        clearInterval(interval);
-      }
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+//   useEffect(() => {
+//    debugger
+//     setCurrentCard(staticActivityResources[0]);
+//   }, [staticActivityResources]);
 
-  useEffect(() => {
-    if (currentIndex < staticActivityResources.length) {
-      setCurrentCard(staticActivityResources[currentIndex]);
-    }
-  }, [currentIndex]);
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//         if (currentIndex < staticActivityResources.length) {
+//             debugger
+//         const existingIndex = currentIndex +1;
+//         setCurrentIndex(existingIndex);
+//       } else {
+//         clearInterval(interval);
+//       }
+//     }, 5000);
+//     return () => clearInterval(interval);
+//   }, []);
+
+//   useEffect(() => {
+//     if (currentIndex < staticActivityResources.length) {
+//       setCurrentCard(staticActivityResources[currentIndex]);
+//     }
+//   }, [currentIndex]);
 
   return (
     <div className="resourceCard">
@@ -57,7 +68,7 @@ const PositiveThoughtsContainer = (props) => {
           <h3>
             Out loud or in your head, read each fact and try to believe it.
           </h3>
-          <div className="positiveThoughts">{currentCard.resource}</div>
+          <div className="positiveThoughts">{staticActivityResources[currentIndex].resource}</div>
         </div>
       </div>
     </div>
