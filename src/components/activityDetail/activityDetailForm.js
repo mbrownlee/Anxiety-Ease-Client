@@ -57,7 +57,7 @@ const ActivityDetailForm = (props) => {
         .then((response) => response.json())
         .then(() => {
             console.log("Added");
-            props.history.push("/activitydetail");
+            props.history.push("/activities");
         });
     }
     

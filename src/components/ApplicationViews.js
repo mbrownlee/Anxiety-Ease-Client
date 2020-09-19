@@ -5,7 +5,7 @@ import Register from "./auth/Register";
 import Login from "./auth/Login";
 import ActivityTypeList from "./activityType/ActivityTypeList";
 import DeepBreathContainer from "./staticActivityResource/DeepBreathContainer";
-import FiveFourThreeList from "./staticActivityResource/FiveFourThreeList";
+import FiveFourThreeContainer from "./staticActivityResource/FiveFourThreeContainer";
 import PositiveThoughtsContainer from "./staticActivityResource/PositiveThoughtsContainer";
 import ActivityDetailForm from "./activityDetail/activityDetailForm";
 
@@ -50,7 +50,7 @@ const ApplicationViews = () => {
         exact
         path="/activities/2"
         render={(props) => {
-          return <FiveFourThreeList {...props} />;
+          return <FiveFourThreeContainer {...props} />;
         }}
       />
       <Route
