@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import useSimpleAuth from "../../hooks/useSimpleAuth";
-import ActivityDetailForm from "../activityDetail/activityDetailForm"
-// import NewActivityDetailButton from "../activityDetail/newActivityDetailInstance";
+
 
 const PositiveThoughtsContainer = (props) => {
   const [staticActivityResources, setStaticActivityResources] = useState([
@@ -41,9 +40,7 @@ const PositiveThoughtsContainer = (props) => {
   const constructNewActivityDetail = (evt) => {
     evt.preventDefault();
       const theActivityDetail = {
-        rating: "",
-        note: "",
-        // activity_type_id: parseInt(activityDetail.activity_type_id),
+        activity_type_id: 3,
       };
       fetch("http://localhost:8000/activitydetail", {
           method: "POST",

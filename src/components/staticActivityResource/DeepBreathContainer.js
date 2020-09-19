@@ -43,6 +43,27 @@ const DeepBreathContainer = (props) => {
       return [true, 1000]
   }
 
+  const constructNewActivityDetail = (evt) => {
+    evt.preventDefault();
+      const theActivityDetail = {
+        activity_type_id: 1,
+      };
+      fetch("http://localhost:8000/activitydetail", {
+          method: "POST",
+          headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+              Authorization: `Token ${localStorage.getItem("anxiety_ease_token")}`,
+            },
+            body: JSON.stringify(theActivityDetail),
+        })
+        .then((response) => response.json())
+        .then(() => {
+            console.log("Added");
+            props.history.push("/activities");
+        });
+    }
+
   return (
     <div className="resourceCard">
       <div className="resourceCard-content">
@@ -50,7 +71,7 @@ const DeepBreathContainer = (props) => {
           <DeepBreathTimer toggleIndex={toggleIndex}/>
           <div className="deepBreath">{currentPrompt.resource}</div>
         </div>
-        <button>Finished</button>
+        <button type="button" onClick={constructNewActivityDetail}> Finish</button>
       </div>
     </div>
   );
