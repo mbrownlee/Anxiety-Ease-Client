@@ -7,7 +7,9 @@ import ActivityTypeList from "./activityType/ActivityTypeList";
 import DeepBreathContainer from "./staticActivityResource/DeepBreathContainer";
 import FiveFourThreeContainer from "./staticActivityResource/FiveFourThreeContainer";
 import PositiveThoughtsContainer from "./staticActivityResource/PositiveThoughtsContainer";
-import ActivityDetailForm from "./activityDetail/activityDetailForm";
+import ActivityDetailEditForm from "./activityDetail/activityDetailEditForm";
+import TheDetail from "./activityDetail/detail"
+import ActivityDetailList from "./activityDetail/activityDetailList"
 
 const ApplicationViews = () => {
   return (
@@ -62,9 +64,23 @@ const ApplicationViews = () => {
       />
       <Route
         exact
-        path="/activitydetail/new"
+        path="/activitydetail"
         render={(props) => {
-          return <ActivityDetailForm {...props} />;
+          return <ActivityDetailList {...props} />;
+        }}
+      />
+      <Route
+        
+        path="/activitydetail/:activityDetailId(\d+)"
+        render={(props) => {
+          return <TheDetail {...props} />;
+        }}
+      />
+      <Route
+        
+        path="/activitydetail/edit/:activityDetailId(\d+)"
+        render={(props) => {
+          return <ActivityDetailEditForm {...props} />;
         }}
       />
     </React.Fragment>

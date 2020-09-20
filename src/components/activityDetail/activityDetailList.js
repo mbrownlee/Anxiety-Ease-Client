@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
-import ActivityDetailCard from "./ActivityDetailCard";
-import useSimpleAuth from "../../hooks/ui/useSimpleAuth";
+import ActivityDetailCard from "./activityDetailCard";
+import useSimpleAuth from "../../hooks/useSimpleAuth";
 // import "./ActivityDetailList.css";
 
 const ActivityDetailList = (props) => {
+  
   const [activityDetails, setActivityDetails] = useState([]);
+  const [activityType, setActivityType] = useState({
+    name: "",
+  });
   const { isAuthenticated } = useSimpleAuth();
 
   const getActivityDetails = () => {
@@ -19,17 +23,23 @@ const ActivityDetailList = (props) => {
         },
       })
         .then((res) => res.json())
-        .then(setActivityDetails);
+        .then((activityDetails) => {
+          setActivityType(activityDetails.activitytype);
+          setActivityDetails(activityDetails)
+        });
     }
   };
+ 
 
-  useEffect(getActivityDetails, []);
+  useEffect(() => {
+    getActivityDetails();
+  }, []);
 
   return (
     <div className="activityDetailList">
-      {activityDetails.map((activityDetail) => (
-        <ActivityDetailCard key={`activityDetail-${activityDetail.id}`} activityDetail={activityDetail} />
-      ))}
+      {activityDetails.map((activityDetail) => {
+       return <ActivityDetailCard key={`activityDetail-${activityDetail.id}`} activityDetail={activityDetail} />
+      })}
     </div>
   );
 };

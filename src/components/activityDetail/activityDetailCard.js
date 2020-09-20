@@ -2,21 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const ActivityDetailCard = (props) => {
+    // debugger;
   return (
     <div className="activitydetailCard">
       <div className="activitydetailCard-content">
-        <div>
-          <Link to={`/activitydetails/${props.activitydetail.id}`}>
-
+        
+        
+          <Link to={`/activitydetail/${props.activityDetail.id}`}>
             {props.activityDetail.created_at}
           </Link>
           <div>
-            {props.activityDetail.rating}
-            {props.activityDetail.note}
-            {props.activityType.name}
-            </div>
+           
+            {props.activityDetail.activity_type.name}
+          
         </div>
-        
       </div>
     </div>
   );
