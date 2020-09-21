@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./activityType.css"
 
 const ActivityTypeCard = (props) => {
   return (
@@ -10,6 +11,7 @@ const ActivityTypeCard = (props) => {
           <Link to={`/activities/${props.activityType.id}`}>
             {props.activityType.name}
           </Link>
+          
         </div>
       </div>
     </div>

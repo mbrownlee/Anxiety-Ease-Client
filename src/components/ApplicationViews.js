@@ -64,7 +64,7 @@ const ApplicationViews = () => {
       />
       <Route
         exact
-        path="/activitydetail"
+        path="/mystats"
         render={(props) => {
           return <ActivityDetailList {...props} />;
         }}

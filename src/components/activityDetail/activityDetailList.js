@@ -13,7 +13,7 @@ const ActivityDetailList = (props) => {
 
   const getActivityDetails = () => {
     if (isAuthenticated()) {
-      fetch("http://localhost:8000/activitydetail", {
+      fetch("http://localhost:8000/activitylist/", {
         method: "GET",
         headers: {
           Accept: "application/json",
@@ -25,7 +25,8 @@ const ActivityDetailList = (props) => {
         .then((res) => res.json())
         .then((activityDetails) => {
           setActivityType(activityDetails.activitytype);
-          setActivityDetails(activityDetails)
+          setActivityDetails(activityDetails.results)
+          console.log(activityDetails.count, activityDetails.next, activityDetails.previous)
         });
     }
   };
@@ -36,11 +37,16 @@ const ActivityDetailList = (props) => {
   }, []);
 
   return (
+    <>
+    <h2>Welcome</h2>
+    <p>Here are your 5 most recent calming activities.</p>
+    <p>You can view the details and edit to make notes (what triggered your anxiety, thoughts, feelings, etc) and rate effectiveness for your own reference. Or you can delete the activity.</p>
     <div className="activityDetailList">
       {activityDetails.map((activityDetail) => {
        return <ActivityDetailCard key={`activityDetail-${activityDetail.id}`} activityDetail={activityDetail} />
       })}
     </div>
+    </>
   );
 };
 

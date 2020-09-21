@@ -103,7 +103,7 @@ const ActivityDetailEditForm = (props) => {
               type="range"
               id="rating"
               name="rating"
-              min="0"
+              min="1"
               max="5"
               onChange={handleFieldChange}
               id="rating"
