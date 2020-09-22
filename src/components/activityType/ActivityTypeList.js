@@ -35,7 +35,7 @@ const ActivityTypeList = (props) => {
       {activityTypes.map((activityType) => (
         <ActivityTypeCard key={`activityType-${activityType.id}`} activityType={activityType} />
       ))}
-      <Link to={"/mystats"}>My Stats</Link>
+      <Link className= "statsTypeCard" to={"/mystats"}>My Stats</Link>
     </div>
      
   );

@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { withRouter } from "react-router-dom";
 import useSimpleAuth from "../../hooks/useSimpleAuth";
-// import "./Login.css";
+import "./auth.css";
 
 const Register = (props) => {
 	const email = useRef();
@@ -30,7 +30,7 @@ const Register = (props) => {
 		<main style={{ textAlign: "center" }}>
 			<form className="form--login" onSubmit={handleRegister}>
 				<h1 className="h3 mb-3 font-weight-normal">Register To Use Anxiety Ease</h1>
-				<fieldset>
+				<fieldset className="form--box">
 					<label htmlFor="userName"> Username </label>
 					<input
 						ref={userName}
@@ -42,7 +42,7 @@ const Register = (props) => {
 						autoFocus
 					/>
 				</fieldset>
-				<fieldset>
+				<fieldset className="form--box">
 					<label htmlFor="inputEmail"> Email address </label>
 					<input
 						ref={email}
@@ -53,7 +53,7 @@ const Register = (props) => {
 						required
 					/>
 				</fieldset>
-				<fieldset>
+				<fieldset className="form--box">
 					<label htmlFor="inputPassword"> Password </label>
 					<input
 						ref={password}
@@ -64,7 +64,7 @@ const Register = (props) => {
 						required
 					/>
 				</fieldset>
-				<fieldset>
+				<fieldset className="form--box">
 					<label htmlFor="verifyPassword"> Verify Password </label>
 					<input
 						ref={verifyPassword}
@@ -75,7 +75,7 @@ const Register = (props) => {
 						required
 					/>
 				</fieldset>
-				<fieldset>
+				<fieldset className="form--box">
 					<button type="submit">Sign in</button>
 				</fieldset>
 			</form>

@@ -11,7 +11,7 @@ const ActivityDetailList = (props) => {
 
   const getActivityDetails = () => {
     if (isAuthenticated()) {
-      fetch("http://localhost:8000/activitylist/?page=1", {
+      fetch("http://localhost:8000/activitylist/", {
         method: "GET",
         headers: {
           Accept: "application/json",

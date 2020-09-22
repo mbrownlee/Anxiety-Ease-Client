@@ -14,24 +14,14 @@ const NavBar = (props) => {
           src={require("../../AnxietyEaseLogo.png")}
           alt="logo"
         /> */}
-        <li>
-          <Link to="/">Anxiety Ease</Link>
-        </li>
-        <li>
-          <Link to="/activities">Activites</Link>
-        </li>
         {/* <li>
-          <Link to="/sell-product">Sell Product</Link>
-        </li>
-        <li>
-          <Link to="/my-products">My Products</Link>
-        </li>
-        <li>
-          <Link to="/my-profile">Profile</Link>
-        </li>
-        <li>
-          <Link to="/products/cart">Cart</Link>
+          <Link to="/">Anxiety Ease</Link>
         </li> */}
+        {isAuthenticated() ? (
+        <li className="nav-item">
+          <Link to="/activities">Activites</Link>
+        </li>) : ("")}
+       
         {isAuthenticated() ? (
           <li className="nav-item">
             <button
