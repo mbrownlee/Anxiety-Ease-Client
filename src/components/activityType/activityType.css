@@ -1,3 +1,10 @@
+.activityContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 .activityTypeCard {
     flex-basis: 28%;
     margin: 1em;

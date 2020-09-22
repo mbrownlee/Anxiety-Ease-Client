@@ -30,12 +30,14 @@ const ActivityTypeList = (props) => {
 }, []);
 
   return (
-    <div className="activityTypeList">
+    <>
+    <div className="activityContainer">
       {activityTypes.map((activityType) => (
         <ActivityTypeCard key={`activityType-${activityType.id}`} activityType={activityType} />
       ))}
-      <Link to={"/mystats"}>My Stats</Link>
     </div>
+      <Link to={"/mystats"}>My Stats</Link>
+      </>
   );
 };
 
