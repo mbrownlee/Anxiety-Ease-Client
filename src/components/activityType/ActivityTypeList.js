@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ActivityTypeCard from "./ActivityTypeCard";
 import useSimpleAuth from "../../hooks/useSimpleAuth";
-// import "./ActivityTypeList.css";
+import "./activityType.css";
 
 const ActivityTypeList = (props) => {
   const [activityTypes, setActivityTypes] = useState([]);

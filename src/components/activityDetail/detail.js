@@ -66,7 +66,7 @@ const TheDetail = (props) => {
               )}`,
             },
           }).then(() => {
-            props.history.push("/activitydetail");
+            props.history.push("/mystats");
           });
         }}
       >

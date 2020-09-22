@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import DeepBreathTimer from "./DeepBreathTimer";
 import useSimpleAuth from "../../hooks/useSimpleAuth";
+import "./staticResource.css"
 
 const DeepBreathContainer = (props) => {
   const [staticActivityResources, setStaticActivityResources] = useState([
@@ -91,17 +92,17 @@ const DeepBreathContainer = (props) => {
         </button>
       </dialog>
       <div className="resourceCard">
-        <div className="resourceCard-content">
-          <div>
+        {/* <div className="resourceCard-content"> */}
+          
             <DeepBreathTimer toggleIndex={toggleIndex} />
             <div className="deepBreath">{currentPrompt.resource}</div>
-          </div>
+          
           <button type="button" onClick={constructNewActivityDetail}>
             {" "}
             Finish
           </button>
         </div>
-      </div>
+      {/* </div> */}
     </>
   );
 };

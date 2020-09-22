@@ -1,0 +1,14 @@
+.activityDetailContainer {
+    margin: 1em;
+    background-color: rgb(200, 211, 237);
+}
+
+.activityDetailList {
+    flex-basis: 28%;
+    margin: 1em;
+    padding: 1em;
+    background: rgba(248, 245, 192, 0.827);
+    border: 1px solid #0a0466;
+    border-radius: 5px;
+    font-size: 14px;
+}

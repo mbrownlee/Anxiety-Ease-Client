@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ActivityDetailCard from "./activityDetailCard";
 import useSimpleAuth from "../../hooks/useSimpleAuth";
-// import "./ActivityDetailList.css";
+import "./activityDetail.css";
 
 const ActivityDetailList = (props) => {
   const [activityDetails, setActivityDetails] = useState([]);
@@ -11,7 +11,7 @@ const ActivityDetailList = (props) => {
 
   const getActivityDetails = () => {
     if (isAuthenticated()) {
-      fetch("http://localhost:8000/activitylist/", {
+      fetch("http://localhost:8000/activitylist", {
         method: "GET",
         headers: {
           Accept: "application/json",
@@ -52,13 +52,10 @@ const ActivityDetailList = (props) => {
 
   return (
     <>
-      <h2>Welcome</h2>
-      <p>Here are your 5 most recent calming activities.</p>
-      <p>
-        You can view the details and edit to make notes (what triggered your
-        anxiety, thoughts, feelings, etc) and rate effectiveness for your own
-        reference. Or you can delete the activity.
-      </p>
+      <div className="activityDetailContainer">
+        <h2>Welcome</h2>
+        <p>You can view the details and edit by clicking the date.</p>
+      </div>
       <div className="activityDetailList">
         {activityDetails.map((activityDetail) => {
           return (
