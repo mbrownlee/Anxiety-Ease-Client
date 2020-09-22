@@ -32,7 +32,7 @@ const DeepBreathTimer = (props) => {
         duration={5}
         colors={[
             ['#0a0466', 0.33],
-            ['#8DBBF2', 0.33],
+            ['#0a0466', 0.33],
             ['#0a0466', 0.33],
         ]}
         onComplete={props.toggleIndex}

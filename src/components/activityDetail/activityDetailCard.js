@@ -2,14 +2,19 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const ActivityDetailCard = (props) => {
-    // debugger;
   return (
     <div className="activitydetailCard">
       <div className="activitydetailCard-content">
         
         
           <Link to={`/activitydetail/${props.activityDetail.id}`}>
-            {props.activityDetail.created_at}
+            {new Date(props.activityDetail.created_at).toLocaleDateString("en-US", {
+                weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+            })}
+            {" "}
+            {new Date(props.activityDetail.created_at).toLocaleTimeString("en-US", {
+                hour: '2-digit', minute: '2-digit'
+            })}
           </Link>
           <div>
            

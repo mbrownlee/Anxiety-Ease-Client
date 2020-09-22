@@ -32,7 +32,7 @@ const PositiveThoughtsContainer = (props) => {
   useEffect(() => {
     let timeout;
     if (currentIndex < staticActivityResources.length - 1) {
-      timeout = setTimeout(() => setCurrentIndex(currentIndex + 1), 2000);
+      timeout = setTimeout(() => setCurrentIndex(currentIndex + 1), 4000);
     } else if (currentIndex !== 0) {
       setCurrentIndex(0);
     }
@@ -62,7 +62,7 @@ const PositiveThoughtsContainer = (props) => {
 
   return (
     <>
-    <dialog className="dialog" ref={finishDialog}>
+      <dialog className="dialog" ref={finishDialog}>
         <div>Would you like to rate and make a note now?</div>
         <button
           className="button--close"
@@ -79,24 +79,22 @@ const PositiveThoughtsContainer = (props) => {
           Later
         </button>
       </dialog>
-    <div className="resourceCard">
-      <div className="resourceCard-content">
-        <div>
-          <h3>
-            Out loud or in your head, read each fact and try to believe it.
-          </h3>
-          <div className="positiveThoughts">
-            {staticActivityResources[currentIndex].resource}
+      <div className="resourceCard">
+        <div className="resourceCard-content">
+          <div>
+            <h3>
+              Out loud or in your head, read each fact and try to believe it.
+            </h3>
+            <div className="positiveThoughts">
+              {staticActivityResources[currentIndex].resource}
+            </div>
+            <button type="button" onClick={constructNewActivityDetail}>
+              {" "}
+              Finish
+            </button>
           </div>
-          {/* <button>Finished</button> */}
-          {/* <NewActivityDetailButton /> */}
-          <button type="button" onClick={constructNewActivityDetail}>
-            {" "}
-            Finish
-          </button>
         </div>
       </div>
-    </div>
     </>
   );
 };
