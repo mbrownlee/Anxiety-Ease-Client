@@ -1,0 +1,22 @@
+.resourceCard {
+    margin: 1em;
+    background-color: rgb(211, 222, 249);
+}
+/* 
+.resourceCard-content{
+    flex-basis: 28%;
+    margin: 1em;
+    padding: 1em;
+    background: rgb(248, 245, 192);
+    border: 1px solid #0a0466;
+    border-radius: 5px;
+} */
+.DeepBreath {
+    padding: .5em;
+    margin-left: 2em;
+}
+
+.deepBreath {
+    font-size: 20px;
+    text-align: center;
+}

@@ -52,7 +52,7 @@ const ActivityDetailEditForm = (props) => {
       .then((response) => response.json())
       .then(() => {
         console.log("Added");
-        props.history.push("/activitydetail");
+        props.history.push("/mystats");
       });
   };
 
@@ -91,6 +91,11 @@ const ActivityDetailEditForm = (props) => {
 
   return (
     <>
+      <p>
+        You can view the details and edit to make notes (what triggered your
+        anxiety, thoughts, feelings, etc) and rate effectiveness for your own
+        reference. Or you can delete the activity.
+      </p>
       <form>
         <fieldset>
           <div className="formgrid">

@@ -31,7 +31,7 @@ const Login = (props) => {
     <main style={{ textAlign: "center" }}>
       <form className="form--login" onSubmit={handleLogin}>
         <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
-        <fieldset>
+        <fieldset className="form--box">
           <label htmlFor="inputEmail"> Email </label>
           <input
             ref={email}
@@ -42,7 +42,7 @@ const Login = (props) => {
             autoFocus
           />
         </fieldset>
-        <fieldset>
+        <fieldset className="form--box">
           <label htmlFor="inputPassword"> Password </label>
           <input
             ref={password}
@@ -53,7 +53,7 @@ const Login = (props) => {
             required
           />
         </fieldset>
-        <fieldset>
+        <fieldset className="form--box">
           <button type="submit">Sign in</button>
         </fieldset>
       </form>

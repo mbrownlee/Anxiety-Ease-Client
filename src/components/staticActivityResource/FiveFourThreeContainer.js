@@ -32,7 +32,7 @@ const FiveFourThreeContainer = (props) => {
   useEffect(() => {
     let timeout;
     if (currentIndex < staticActivityResources.length - 1) {
-      timeout = setTimeout(() => setCurrentIndex(currentIndex + 1), 2000);
+      timeout = setTimeout(() => setCurrentIndex(currentIndex + 1), 6000);
     }
     return () => clearTimeout(timeout);
   }, [staticActivityResources, currentIndex]);

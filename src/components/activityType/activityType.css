@@ -9,6 +9,16 @@
     flex-basis: 28%;
     margin: 1em;
     padding: 1em;
-    background: #FDEECC;
-    border: 1px solid #8DBBF2;
+    background: rgb(248, 245, 192);
+    border: 1px solid #0a0466;
+    border-radius: 5px;
+}
+
+.statsTypeCard {
+    flex-basis: 28%;
+    margin: 1em;
+    padding: 1em;
+    background: #FACEDF;
+    border: 1px solid #0a0466;
+    border-radius: 5px;
 }
