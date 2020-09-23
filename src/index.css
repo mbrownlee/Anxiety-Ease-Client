@@ -5,10 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+    background-color: #8DBBF2;
     background-image: url("AnxietyEaseLogo.png");
     background-repeat: no-repeat;
     background-position: center top;
+
   
 }
 
@@ -18,14 +19,6 @@ code {
 }
 
 button {
-  padding: 10px;
-  background-color: rgb(248, 245, 192);
-  border: 1px solid #0a0466;
-  background-color: 250ms;
-  border-radius: 5px;
-  box-shadow: 1px 2px #0a0466;
-}
-.button {
   padding: 10px;
   background-color: rgb(248, 245, 192);
   border: 1px solid #0a0466;

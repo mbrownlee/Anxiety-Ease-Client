@@ -9,19 +9,26 @@ const NavBar = (props) => {
   return (
     <nav>
       <ul>
-        {/* <img
-          className="logoease"
-          src={require("../../AnxietyEaseLogo.png")}
-          alt="logo"
-        /> */}
-        {/* <li>
-          <Link to="/">Anxiety Ease</Link>
-        </li> */}
         {isAuthenticated() ? (
-        <li className="nav-item">
-          <Link to="/activities">Activites</Link>
-        </li>) : ("")}
-       
+          <li className="nav-item">
+            <Link to="/activities">
+              <button type="button">Activites</button>
+            </Link>
+          </li>
+        ) : (
+          ""
+        )}
+
+        {isAuthenticated() ? (
+          <li className="nav-item">
+            <Link to="/mystats">
+              <button type="button">My Stats</button>
+            </Link>
+          </li>
+        ) : (
+          ""
+        )}
+
         {isAuthenticated() ? (
           <li className="nav-item">
             <button
@@ -40,12 +47,12 @@ const NavBar = (props) => {
           <>
             <li className="nav-item">
               <Link className="nav-link" to="/login">
-                Login
+                <button type="button">Login</button>
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/register">
-                Register
+                <button type="button">Register</button>
               </Link>
             </li>
           </>
