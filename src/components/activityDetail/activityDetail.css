@@ -1,6 +1,6 @@
 .activityDetailContainer {
   margin: 1em;
-  background-color: rgb(198, 248, 192);
+  /* background-color: rgb(198, 248, 192); */
   margin-left: 15%;
   margin-right: 15%;
   text-align: center;
@@ -13,6 +13,7 @@
   background: rgba(248, 245, 192, 0.827);
   border: 1px solid #0a0466;
   border-radius: 5px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
   /* font-size: 14px; */
 }
 

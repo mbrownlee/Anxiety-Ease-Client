@@ -78,22 +78,24 @@ const FiveFourThreeContainer = (props) => {
         </button>
       </dialog>
       <div className="resourceCard">
+        <h3>
+          Out loud or in your head, answer each prompt. Notice what is around
+          you.
+        </h3>
         <div className="resourceCard-content">
-          <div>
-            <h3>
-              Out loud or in your head, answer each prompt. Notice what is
-              around you.
-            </h3>
-            <div className="5-4-3-2-1">
-              {staticActivityResources[currentIndex].resource}
-            </div>
-            <button type="button" onClick={constructNewActivityDetail}>
-              {" "}
-              Finish
-            </button>
+          <div className="5-4-3-2-1">
+            {staticActivityResources[currentIndex].resource}
           </div>
         </div>
       </div>
+      <button
+        type="button"
+        className="breathButton"
+        onClick={constructNewActivityDetail}
+      >
+        {" "}
+        Finish
+      </button>
     </>
   );
 };

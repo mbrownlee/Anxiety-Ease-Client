@@ -9,7 +9,7 @@ const ActivityDetailCard = (props) => {
         
           <Link to={`/activitydetail/${props.activityDetail.id}`}>
             {new Date(props.activityDetail.created_at).toLocaleDateString("en-US", {
-                weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+                weekday: 'short', year: 'numeric', month: 'long', day: 'numeric'
             })}
             {" "}
             {new Date(props.activityDetail.created_at).toLocaleTimeString("en-US", {

@@ -1,24 +1,56 @@
 .activityContainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .activityTypeCard {
-    flex-basis: 28%;
-    margin: 1em;
-    padding: 1em;
-    background: rgb(248, 245, 192);
-    border: 1px solid #0a0466;
-    border-radius: 5px;
+  flex-basis: 28%;
+  margin: 1em;
+  padding: 1em;
+  /* background: rgb(248, 245, 192); */
+  /* border: 1px solid #0a0466;
+    border-radius: 5px; */
 }
 
 .statsTypeCard {
-    flex-basis: 28%;
-    margin: 1em;
-    padding: 1em;
-    background: #FACEDF;
-    border: 1px solid #0a0466;
-    border-radius: 5px;
+  flex-basis: 28%;
+  margin: 1em;
+  padding: 1em;
+  /* background: #FACEDF; */
+  /* border: 1px solid #0a0466;
+    border-radius: 5px; */
 }
+
+.activityTypeButton {
+  height: 80px;
+  width: 100px;
+  background-color: rgb(248, 245, 192);
+  border: 1px solid #0a0466;
+  background-color: 250ms;
+  border-radius: 5px;
+  /* box-shadow: 1px 2px #0a0466; */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+  padding: 0.25em 0.75em;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 525;
+  line-height: 1.1;
+}
+
+.statsButton {
+    height: 80px;
+    width: 100px;
+    background-color:#FACEDF;
+    border: 1px solid #0a0466;
+    background-color: 250ms;
+    border-radius: 5px;
+    /* box-shadow: 1px 2px #0a0466; */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+    padding: 0.25em 0.75em;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 525;
+    line-height: 1.1;
+  }
