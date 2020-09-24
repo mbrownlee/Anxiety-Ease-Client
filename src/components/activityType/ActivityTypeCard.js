@@ -1,20 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./activityType.css"
+import "./activityType.css";
 
 const ActivityTypeCard = (props) => {
   return (
-    
-      
-        <div className="activityTypeCard">
-        {/* I want it to link to the resources associated with the activity type chosen */}
-          <Link to={`/activities/${props.activityType.id}`}>
-            {props.activityType.name}
-          </Link>
-          
-        </div>
-     
-    
+    <div className="activityTypeCard">
+      <Link to={`/activities/${props.activityType.id}`}>
+        <button className="activityTypeButton" type="button">{props.activityType.name} </button>
+      </Link>
+    </div>
   );
 };
 

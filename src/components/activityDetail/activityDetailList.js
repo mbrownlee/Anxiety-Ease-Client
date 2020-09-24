@@ -54,9 +54,9 @@ const ActivityDetailList = (props) => {
     <>
       <div className="activityDetailContainer">
         <h2>Welcome</h2>
-        <p>You can view the details and edit by clicking the date.</p>
       </div>
       <div className="activityDetailList">
+        <p>You can view the details and edit by clicking the date.</p>
         {activityDetails.map((activityDetail) => {
           return (
             <ActivityDetailCard

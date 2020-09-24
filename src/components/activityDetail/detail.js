@@ -55,7 +55,7 @@ const TheDetail = (props) => {
       >
         Edit
       </button>
-      <button
+      <button className="delete"
         onClick={() => {
           fetch(`http://localhost:8000/activitydetail/${activityDetail.id}`, {
             method: "DELETE",

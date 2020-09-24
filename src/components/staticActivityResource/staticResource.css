@@ -1,22 +1,47 @@
 .resourceCard {
-    margin: 1em;
-    background-color: rgb(211, 222, 249);
+  /* display: flexbox; */
+  display: flex;
+  justify-content: center; /* center horizontal */
+  align-items: center;
+  margin: 1em;
+  background-color: rgb(211, 222, 249);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+  min-height: 350px;
+  text-align: center;
 }
-/* 
-.resourceCard-content{
-    flex-basis: 28%;
-    margin: 1em;
-    padding: 1em;
-    background: rgb(248, 245, 192);
-    border: 1px solid #0a0466;
-    border-radius: 5px;
-} */
+
+.resourceCard-content {
+  background-color: rgb(248, 245, 192);
+  border-radius: 5px;
+  border-style: double;
+  border-color: rgb(98, 161, 239);
+  /* justify-content: center;
+    justify-items: center; */
+  width: 80%;
+  min-height: 200px;
+  /* position: relative; */
+  margin: 10px;
+}
+
 .DeepBreath {
-    padding: .5em;
-    margin-left: 2em;
+  padding: 0.5em;
+  margin-left: 2em;
 }
 
 .deepBreath {
-    font-size: 20px;
-    text-align: center;
+  font-size: 20px;
+  text-align: center;
+}
+
+.breathButton {
+  width: 85%;
+  height: 50px;
+  margin-left: 30px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+}
+
+.dialog {
+  background-color: #facedf;
+  border-radius: 5px;
 }

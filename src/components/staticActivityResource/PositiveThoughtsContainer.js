@@ -32,7 +32,7 @@ const PositiveThoughtsContainer = (props) => {
   useEffect(() => {
     let timeout;
     if (currentIndex < staticActivityResources.length - 1) {
-      timeout = setTimeout(() => setCurrentIndex(currentIndex + 1), 4000);
+      timeout = setTimeout(() => setCurrentIndex(currentIndex + 1), 8000);
     } else if (currentIndex !== 0) {
       setCurrentIndex(0);
     }
@@ -80,21 +80,20 @@ const PositiveThoughtsContainer = (props) => {
         </button>
       </dialog>
       <div className="resourceCard">
-        <div className="resourceCard-content">
-          <div>
-            <h3>
-              Out loud or in your head, read each fact and try to believe it.
-            </h3>
-            <div className="positiveThoughts">
-              {staticActivityResources[currentIndex].resource}
-            </div>
-            <button type="button" onClick={constructNewActivityDetail}>
-              {" "}
-              Finish
-            </button>
+          <h3>
+            Out loud or in your head, read each fact and try to believe it.
+          </h3>
+      <div className="resourceCard-content">
+          <div className="positiveThoughts">
+            {staticActivityResources[currentIndex].resource}
           </div>
         </div>
       </div>
+      
+      <button type="button" className="breathButton" onClick={constructNewActivityDetail}>
+        {" "}
+        Finish
+      </button>
     </>
   );
 };
