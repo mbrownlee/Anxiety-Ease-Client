@@ -7,6 +7,7 @@ import ActivityTypeList from "./activityType/ActivityTypeList";
 import DeepBreathContainer from "./staticActivityResource/DeepBreathContainer";
 import FiveFourThreeContainer from "./staticActivityResource/FiveFourThreeContainer";
 import PositiveThoughtsContainer from "./staticActivityResource/PositiveThoughtsContainer";
+import MuscleRelaxationContainer from "./staticActivityResource/MuscleTimer";
 import ActivityDetailEditForm from "./activityDetail/activityDetailEditForm";
 import TheDetail from "./activityDetail/detail"
 import ActivityDetailList from "./activityDetail/activityDetailList"
@@ -60,6 +61,13 @@ const ApplicationViews = () => {
         path="/activities/3"
         render={(props) => {
           return <PositiveThoughtsContainer {...props} />;
+        }}
+      />
+      <Route
+        exact
+        path="/activities/4"
+        render={(props) => {
+          return <MuscleRelaxationContainer {...props} />;
         }}
       />
       <Route
