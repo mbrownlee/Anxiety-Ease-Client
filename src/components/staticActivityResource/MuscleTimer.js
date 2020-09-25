@@ -110,7 +110,7 @@ const MuscleRelaxationContainer = (props) => {
       <div className="resourceCard">
         <div className="resourceCard-content">
           <div className="Muscles">
-          <h3>Preogressive Muscle Relaxation</h3>
+          <h3 className="resourceCard__header">Preogressive Muscle Relaxation</h3>
           <div className="deepBreath">{staticActivityResources[currentIndex].resource} </div>
           <MuscleTimer />
           </div>
