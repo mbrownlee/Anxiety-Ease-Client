@@ -108,7 +108,7 @@ const MuscleRelaxationContainer = (props) => {
         </button>
       </dialog>
       <div className="resourceCard">
-        <div className="resourceCard-content">
+        {/* <div className="resourceCard-content"> */}
           <div className="Muscles">
           <h3 className="resourceCard__header">Preogressive Muscle Relaxation</h3>
           <div className="deepBreath">{staticActivityResources[currentIndex].resource} </div>
@@ -119,7 +119,7 @@ const MuscleRelaxationContainer = (props) => {
           never pain while completing this exercise.
         </p>
         </div>
-      </div>
+      {/* </div> */}
       <button
         type="button"
         className="breathButton"

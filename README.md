@@ -1,68 +1,28 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Anxiety-Ease-Client
 
-In the project directory, you can run:
+<img src="https://raw.githubusercontent.com/mbrownlee/Anxiety-Ease-Client/master/src/AnxietyEaseLogo.png" alt="logo" width="200"/>
 
-### `npm start`
+Anxiety Ease Client is a React Client companion to Anxiety Ease: a Djnago REST API. 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## About the Project 
+Many people are afflicated with anxiety - whether it be situational or full blown anxiety disorder. It is estimated 18% of US adults have Anxiety Disorder and many more deal with situational anxiety stemming from every day life. We are living in times of uncertain economy, social media stress, poor sleep habits, work stress, family stress, political upheaval, and more recently a global pandemic. Anxeity Ease is a self help app of calming activites so an individual might be able to divert an anxiety attack. Users are presented with different activites that have proven effective in helping others deal with anxiety: deep breathing, a grounding technique, progressive muscle relaxation, and positive facts about anxiety. After participating in an activity, the user is given the opportunity to rate the effectiveness of the activity and to take notes. The user can choose to come back to that later if they aren't feeling calm yet. The notes section allows the users to make note of what triggered the anxiety, how they felt before and during, and anything else relavent. THis allows users to be aware of what might trigger their anxiety in the future as well as lets them track information to discuss their anxiety with their doctor or therapist if they feel it is a problem.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Anxiety Ease is intended to be a mobile app so that users can always have it available in their pocket when they begin to feel anxious.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img src="https://raw.githubusercontent.com/mbrownlee/Anxiety-Ease/master/anxietyapp/images/Screen%20Shot%202020-09-29%20at%202.42.29%20PM.png" alt="logo" height="450"/>
 
-### `npm run build`
+Anxiety Ease is not meant to treat or diagnose anyone who suffers from anxiety. It is purely for self help.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Set Up
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+1. Clone Anxiety Ease by running: git clone https://github.com/mbrownlee/Anxiety-Ease-Client in your terminal
+2. Run npm start This will open the project on http://localhost:3000
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+![alt text](https://raw.githubusercontent.com/mbrownlee/Anxiety-Ease/master/anxietyapp/images/Screen%20Shot%202020-09-09%20at%201.31.01%20PM.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
