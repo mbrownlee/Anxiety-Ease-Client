@@ -78,7 +78,7 @@ const FiveFourThreeContainer = (props) => {
         </button>
       </dialog>
       <div className="resourceCard">
-        <h3>
+      <h3 className="resourceCard__header">
           Out loud or in your head, answer each prompt. Notice what is around
           you.
         </h3>

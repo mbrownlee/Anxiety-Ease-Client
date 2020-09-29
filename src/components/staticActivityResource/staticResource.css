@@ -1,26 +1,31 @@
 .resourceCard {
-  /* display: flexbox; */
   display: flex;
+  flex-direction: column;
   justify-content: center; /* center horizontal */
   align-items: center;
   margin: 1em;
   background-color: rgb(211, 222, 249);
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
   min-height: 350px;
-  text-align: center;
+}
+
+.resourceCard__header {
+    padding: 0 1rem;
+    text-align: center;
 }
 
 .resourceCard-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(248, 245, 192);
   border-radius: 5px;
   border-style: double;
   border-color: rgb(98, 161, 239);
-  /* justify-content: center;
-    justify-items: center; */
   width: 80%;
   min-height: 200px;
-  /* position: relative; */
   margin: 10px;
+  padding: 0.75rem;
 }
 
 .DeepBreath {

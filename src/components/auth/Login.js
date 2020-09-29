@@ -3,26 +3,22 @@ import React, { useRef } from "react";
 import useSimpleAuth from "../../hooks/useSimpleAuth";
 
 const Login = (props) => {
-  const email = useRef();
+  const username = useRef();
   const password = useRef();
   const { login } = useSimpleAuth();
 
-  // Simplistic handler for login submit
+  
   const handleLogin = (e) => {
     e.preventDefault();
 
-    /*
-            For now, just store the email and password that
-            the customer enters into local storage.
-        */
     const credentials = {
-      email: email.current.value,
+      username: username.current.value,
       password: password.current.value,
     };
 
     login(credentials).then(() => {
       props.history.push({
-        pathname: "/",
+        pathname: "/activities",
       });
     });
   };
@@ -32,12 +28,12 @@ const Login = (props) => {
       <form className="form--login" onSubmit={handleLogin}>
         <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
         <fieldset className="form--box">
-          <label htmlFor="inputEmail"> Email </label>
+          <label htmlFor="userName"> Username </label>
           <input
-            ref={email}
-            type="email"
+            ref={username}
+            type="username"
             className="form-control"
-            placeholder="email"
+            placeholder="username"
             required
             autoFocus
           />

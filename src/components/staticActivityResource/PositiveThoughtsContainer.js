@@ -80,7 +80,7 @@ const PositiveThoughtsContainer = (props) => {
         </button>
       </dialog>
       <div className="resourceCard">
-          <h3>
+          <h3 className="resourceCard__header">
             Out loud or in your head, read each fact and try to believe it.
           </h3>
       <div className="resourceCard-content">

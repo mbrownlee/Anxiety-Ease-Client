@@ -66,19 +66,10 @@ const ActivityDetailList = (props) => {
           );
         })}
       </div>
-      {next !== null ? (
-        <button
-          onClick={() => {
-            getPage(next);
-          }}
-        >
-          Next 5
-        </button>
-      ) : (
-        ""
-      )}
+
       {previous !== null ? (
         <button
+          className="btn btn--next"
           onClick={() => {
             getPage(previous);
           }}
@@ -88,6 +79,20 @@ const ActivityDetailList = (props) => {
       ) : (
         ""
       )}
+
+      {next !== null ? (
+        <button
+          className="btn btn--next"
+          onClick={() => {
+            getPage(next);
+          }}
+        >
+          Next 5
+        </button>
+      ) : (
+        ""
+      )}
+      
     </>
   );
 };
